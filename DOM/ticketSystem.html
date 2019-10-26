@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tickets</title>
+</head>
+<body>
+    
+    <h1>Ticket System - Rexburg City</h1>
+    What was your speed: <input type="number" id="speed">Miles/h
+    <input type="button" onclick="checkIt()" value="Check">
+    <h2 id="result"></h2>
+
+    <script>
+        function checkIt()
+        {
+            var txt = document.getElementById('speed')
+            var speed = Number(txt.value)
+            var result = document.getElementById('result')
+            if(speed <= 0)
+            {
+                result.innerText = "Enter a valid Value!"
+            }
+            else if(speed < 20)
+            {
+                result.innerText = "Your Speed being less than 20, you are Safe!"
+            }
+            else if(speed > 20 && speed < 40)
+            {
+                result.innerText = "Your Speed being between 20 and 40, take care the Students, but you might be still safe!"
+            }
+            else{
+                result.innerText = "You are in troubles!"
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Learning DOM - 1</title>
+    <style>
+        #area {
+        width: 10rem;
+        height: 10rem; 
+        color: white;
+        background-color: green;
+        text-align: center;
+        line-height: 10rem;
+    }
+    </style>
+</head>
+<body>
+    <div id="area" onclick="change()" onmousemove="entered()"
+    onmouseout="out()">
+        Try One
+    </div>
+
+    <script>
+        var a = window.document.getElementById('area')
+        function change() {
+            a.innerText = "Clicked"
+            a.style.backgroundColor = "red"
+        }
+
+        function entered() {
+            a.innerText = "Mouse On"
+            a.style.backgroundColor = "black"
+        }
+        function out() {
+            a.innerText = "Mouse Out"
+            a.style.backgroundColor = "green"
+            a.style.color = "red"
+        }
+    </script>
+</body>
+</html>

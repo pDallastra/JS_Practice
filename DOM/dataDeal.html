@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Working with Data</h1>
+    <input type="number" name="numb1" id="numb1">
+    <input type="number" name="numb2" id="numb2">
+    <input type="button" value="Sum" onclick="sum1()">
+
+    <h2 id="result">Total is: </h2>
+    
+    <script>
+        function sum1(){
+            var numb1 = document.getElementById('numb1')
+            var numb2 = document.getElementById('numb2')
+            var n1 = Number(numb1.value) 
+            var n2 = Number(numb2.value)
+            var result = n1 + n2
+            var showResult = document.getElementById('result')
+            showResult.innerText = `The total of ${n1} + ${n2} is ${result} `
+        }
+    </script>
+</body>
+</html>
